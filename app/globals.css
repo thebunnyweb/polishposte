@@ -1,0 +1,46 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens (simple, dark-first like ChatGPT) */
+:root {
+  --background: 222 14% 10%;
+  --foreground: 210 14% 95%;
+  --muted: 220 10% 18%;
+  --muted-foreground: 215 11% 75%;
+  --primary: 200 100% 60%;
+  --primary-foreground: 210 40% 98%;
+  --border: 220 8% 20%;
+}
+
+html, body, #__next { height: 100%; }
+
+body {
+  @apply bg-background text-foreground;
+  font-family: var(--font-ui), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* prose tweaks */
+.prose :where(pre):not(:where(.not-prose *)) {
+  background: transparent;
+}
+
+/* Split gutter styling */
+.gutter {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.gutter.gutter-horizontal {
+  cursor: col-resize;
+}
+.gutter.gutter-horizontal::after{
+  content: "";
+  display: block;
+  width: 4px;
+  height: 36px;
+  margin: auto;
+  border-radius: 9999px;
+  background: hsl(var(--border));
+}
