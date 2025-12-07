@@ -8,6 +8,7 @@ create table if not exists public.documents (
   theme text default 'onedark',
   font_size int default 16,
   filename text,
+  is_public boolean not null default false,
   created_at timestamptz not null default now()
 );
 alter table public.documents enable row level security;
