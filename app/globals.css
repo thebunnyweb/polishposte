@@ -5,6 +5,16 @@
 
 /* Design tokens (simple, dark-first like ChatGPT) */
 :root {
+  --background: 210 25% 98%;
+  --foreground: 220 16% 20%;
+  --muted: 210 20% 92%;
+  --muted-foreground: 220 10% 40%;
+  --primary: 200 100% 55%;
+  --primary-foreground: 210 40% 98%;
+  --border: 220 12% 85%;
+}
+
+.dark {
   --background: 222 14% 10%;
   --foreground: 210 14% 95%;
   --muted: 220 10% 18%;

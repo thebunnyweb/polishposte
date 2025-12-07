@@ -32,13 +32,10 @@ export default async function DocPage({ params }: Params) {
     <div className="min-h-screen bg-background text-foreground p-6">
       <div className="mx-auto max-w-4xl">
         <div className={`rounded-2xl p-6 md:p-8 shadow-2xl ring-1 ring-black/10 border relative overflow-hidden ${CARBON_BG[theme]}`}>
-          <div className="absolute left-4 top-4 flex items-center gap-2 opacity-70">
-            <span className="size-3 rounded-full bg-red-400" />
-            <span className="size-3 rounded-full bg-yellow-400" />
-            <span className="size-3 rounded-full bg-green-400" />
-            <span className="ml-2 text-xs text-white/70 select-none">{filename}</span>
+          <div className="absolute left-4 top-4 opacity-90">
+            <span className="ml-2 text-xs text-white/90 select-none bg-black/30 px-2 py-1 rounded">{filename}</span>
           </div>
-          <div className="mt-5">
+          <div className="mt-10">
             <PrismPreview code={code} lang={lang} fontSize={fontSize} />
           </div>
         </div>
